@@ -41,3 +41,27 @@ $RouteCollection->addRoute(new Route('/api/tasks/<id>', [
     'method' => 'GET'
 ]));
 
+$RouteCollection->addRoute(new Route('/api/timeentries', [
+    'controller' => 'TimeEntry',
+    'action' => 'index',
+    'method' => 'GET'
+]));
+
+$RouteCollection->addRoute(new Route('/api/timeentries/<id>', [
+    'controller' => 'TimeEntry',
+    'action' => 'view',
+    'method' => 'GET'
+]));
+
+$RouteCollection->addRoute(new Route('/api/timeentries', [
+    'controller' => 'TimeEntry',
+    'action' => 'create',
+    'method' => 'POST'
+]));
+
+$RouteCollection->addRoute(new Route('/api/timeentries/<id>', [
+    'controller' => 'TimeEntry',
+    'action' => 'update',
+    'method' => 'PUT'
+]));
+

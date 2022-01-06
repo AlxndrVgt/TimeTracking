@@ -40,3 +40,62 @@ Backend and API for TimeTracking App.
 ### View
 
 ``` GET /api/tasks/<id>```
+
+## TimeEntry
+
+```json
+{
+    "id": <int>,
+    "customerID": <int>,
+    "Customer": {
+        "id": <int>,
+        "customerNo": <int>,
+        "name": <string>
+    },
+    "taskID": <int>,
+    "Task": {
+        "id": <int>,
+        "taskNo": <string>,
+        "name": <string>
+    },
+    "duration": <int>, // in seconds
+    "date": <string>, // in format: YYYY-MM-DD
+    "description": <string>
+}
+```
+
+### Index
+
+``` GET /api/timeentries```
+
+### View
+
+``` GET /api/timeentries/<id>```
+
+### Create
+
+``` POST /api/timeentries ```
+
+```json
+{
+  "customerID": <int>,
+  "taskID": <int>,
+  "duration": <int>, // in seconds
+  "date": <string>, // in format: YYYY-MM-DD
+  "description": <string>
+}
+```
+
+### Update
+
+``` PUT /api/timeentries/<id> ```
+
+```json
+{
+  "customerID": <int>,
+  "taskID": <int>,
+  "duration": <int>, // in seconds
+  "date": <string>, // in format: YYYY-MM-DD
+  "description": <string>
+}
+```
