@@ -13,6 +13,7 @@
     "require": {
         "php": "^8.0",
         "avolutions/avolutions": "^0.9.0"
+        "phpoffice/phpspreadsheet": "dev-master"
     },
     "minimum-stability": "dev",
     "autoload": {

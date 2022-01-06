@@ -65,3 +65,7 @@ $RouteCollection->addRoute(new Route('/api/timeentries/<id>', [
     'method' => 'PUT'
 ]));
 
+$RouteCollection->addRoute(new Route('/export', [
+    'controller' => 'Export',
+    'action' => 'index'
+]));
