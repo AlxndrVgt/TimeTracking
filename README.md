@@ -22,3 +22,21 @@ Backend and API for TimeTracking App.
 
 ``` GET /api/customers/<id>```
 
+## Task
+
+```json
+{
+  "id": <int>,
+  "customerID": <int>,
+  "taskNo": <string>,
+  "name": <string>
+}
+```
+
+### Index
+
+``` GET /api/tasks```
+
+### View
+
+``` GET /api/tasks/<id>```

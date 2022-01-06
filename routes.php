@@ -16,7 +16,8 @@ $RouteCollection = $Application->get(RouteCollection::class);
 
 /**
  * Register routes
- */$RouteCollection->addRoute(new Route('/api/customers', [
+ */
+$RouteCollection->addRoute(new Route('/api/customers', [
     'controller' => 'Customer',
     'action' => 'index',
     'method' => 'GET'
@@ -24,6 +25,18 @@ $RouteCollection = $Application->get(RouteCollection::class);
 
 $RouteCollection->addRoute(new Route('/api/customers/<id>', [
     'controller' => 'Customer',
+    'action' => 'view',
+    'method' => 'GET'
+]));
+
+$RouteCollection->addRoute(new Route('/api/tasks', [
+    'controller' => 'Task',
+    'action' => 'index',
+    'method' => 'GET'
+]));
+
+$RouteCollection->addRoute(new Route('/api/tasks/<id>', [
+    'controller' => 'Task',
     'action' => 'view',
     'method' => 'GET'
 ]));
